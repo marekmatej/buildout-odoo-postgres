@@ -49,7 +49,7 @@ postgres_port = 5434        (5432 default postgres)
 ```
 
 # TODO
-- move Usage to Fabric
+- move Usage to Fabric, more http://fabfile.org/
 - generate Apache and Nginx config for virualhost with Buildout
 
 # Contributors
