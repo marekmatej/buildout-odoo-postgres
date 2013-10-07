@@ -43,8 +43,9 @@ config file: etc/openerp.cfg, if you want change more options in openerp.cfg, do
 please add section [openerp] to buildout.cfg
 and set options.'add_option' = value, where 'add_option' is from openerp.cfg and run buildout again.
 
-Example: change logging level in 'buildout.cfg'
+Example: change logging level for PpenERP
 ```
+'buildout.cfg'
 ...
 [openerp]
 options.log_handler = [':ERROR']
