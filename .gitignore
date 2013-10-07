@@ -1,0 +1,13 @@
+var/
+parts/
+lib/
+include/
+eggs/
+develop-eggs/
+downloads/
+data/
+etc/
+bin/
+openerp/
+.installed.cfg
+upgrade.py
