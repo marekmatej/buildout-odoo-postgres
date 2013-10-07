@@ -48,3 +48,9 @@ openerp_xmlrpcs_port = 8071
 supervisor_port = 9002
 postgres_port = 5434
 ```
+
+TODO
+====
+
+- move Usage to fabric
+- add apache and nginx config for virualhost
