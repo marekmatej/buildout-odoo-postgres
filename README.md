@@ -2,7 +2,9 @@ Buildout for OpenERP with PostgreSQL
 ====================================
 
 OpenERP 7.0, PostgreSQL 9.3 and Supervisord 3.0
-- PostgreSQL running under user, enabled "trust" authentication for local connections http://www.postgresql.org/docs/9.3/static/auth-methods.html
+- Buildout create cron for starting Supervisord after reboot
+- Supervisor run PostgreSQL, more http://supervisord.org/
+- PostgreSQL run under user, and build enabled "trust" authentication for local connections more http://www.postgresql.org/docs/9.3/static/auth-methods.html
 
 Usage
 =====
@@ -26,7 +28,7 @@ Settings
 
 default in buildout.cfg, change values before run buildout
 
-```Shell
+```
 openerp_version = nightly 7.0 latest
 openerp_xmlrpc_port = 8069
 openerp_xmlrpcs_port = 8071
