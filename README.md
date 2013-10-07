@@ -38,6 +38,17 @@ postgres_maxconn = 100
 supervisor_port = 9002
 supervisor_url = http://127.0.0.1
 ```
+## OpenERP
+config file: etc/openerp.cfg, if you want change more options in openerp.cfg, don't edit this file,
+please add section [openerp] to buildout.cfg and set options.<add_option> = value, <add_option> from openerp.cfg.
+and run buildout again.
+
+Example: change logging level
+...
+[openerp]
+options.log_handler = [':ERROR']
+...
+
 
 if you want running more then one instance of OpenERP, or another user running same buildout,
 please change ports:
