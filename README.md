@@ -60,4 +60,4 @@ postgres_port = 5434        (5432 default postgres)
 
 ## Creators
 
-Rastislav Kober, http://www.kybi.org
+Rastislav Kober, http://www.kybi.sk
