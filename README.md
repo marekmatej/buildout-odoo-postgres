@@ -1,5 +1,4 @@
-Buildout for OpenERP with PostgreSQL
-====================================
+# Buildout for OpenERP with PostgreSQL
 
 OpenERP 7.0, PostgreSQL 9.3 and Supervisord 3.0
 - Buildout create cron for starting Supervisord after machine reboot
@@ -7,8 +6,8 @@ OpenERP 7.0, PostgreSQL 9.3 and Supervisord 3.0
 - PostgreSQL run under user, and build enabled "trust" authentication for local connections,
  more http://www.postgresql.org/docs/9.3/static/auth-methods.html
 
-Usage
-=====
+# Usage
+
 ```
 cd virtualenv projects dir
 git clone https://github.com/kybi/buildout-openerp-postgres openerp
@@ -24,8 +23,7 @@ psql -d postgres -c 'CREATE DATABASE ...'  # copy this line from shell after run
 start_openerp
 ```
 
-Settings
-=========
+# Settings
 
 default in buildout.cfg, change values before run buildout
 
@@ -53,8 +51,13 @@ supervisor_port = 9002      (9001 default supervisord)
 postgres_port = 5434        (5432 default postgres)
 ```
 
-TODO
-====
+# TODO
 
 - move Usage to fabric
 - generate apache and nginx config for virualhost with buildout
+
+# Contributors
+
+## Creators
+
+Rastislav Kober, http://www.kybi.org
