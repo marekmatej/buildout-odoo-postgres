@@ -12,6 +12,7 @@ mkvirtualenv openerp
 cdvirtualenv
 mkdir eggs
 python bootstrap.py
+change settings in buildout.cfg
 buildout
 supervisord             # start supervisor deamon
 supervisorctl status    # check if running postgres
