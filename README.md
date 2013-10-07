@@ -53,4 +53,4 @@ TODO
 ====
 
 - move Usage to fabric
-- add apache and nginx config for virualhost
+- generate apache and nginx config for virualhost with buildout
