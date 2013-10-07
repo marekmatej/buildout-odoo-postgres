@@ -1,7 +1,7 @@
 Buildout for OpenERP with PostgreSQL
 ====================================
 
-Buildout for OpenERP 7.0, PostgreSQL 9.3 and Supervisord
+OpenERP 7.0, PostgreSQL 9.3 and Supervisord 3.0
 
 Usage
 =====
@@ -13,8 +13,28 @@ cdvirtualenv
 mkdir eggs
 python bootstrap.py
 buildout
-supervisord
-supervisorctl status
-psql -d postgres -c 'CREATE DATABASE openerp_kybi'  # line copy from shell
+supervisord             # start supervisor deamon
+supervisorctl status    # check if running postgres
+psql -d postgres -c 'CREATE DATABASE ...'  # copy this line from shell after run buildout
 start_openerp
+```
+
+Settings
+=========
+
+default in buildout.cfg, change values before run buildout
+
+```Shell
+openerp_version = nightly 7.0 latest
+
+postgres_version = 9.3.0
+postgres_host = 127.0.0.1
+postgres_db_name = openerp
+postgres_user = ${env:USER}
+postgres_password = false
+postgres_port = 5434
+postgres_maxconn = 100
+
+supervisor_port = 9002
+supervisor_url = http://127.0.0.1
 ```
