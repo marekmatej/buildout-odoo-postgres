@@ -51,7 +51,7 @@ options.log_handler = [':ERROR']
 ...
 ```
 
-if you want to run more then one instance of OpenERP, or another user running same buildout on same machine,
+if you want to run more then one instance of OpenERP, or another user is running same buildout on the same machine,
 please change ports:
 ```
 openerp_xmlrpc_port = 8069  (8069 default openerp)
