@@ -40,7 +40,8 @@ supervisor_port = 9002
 supervisor_url = http://127.0.0.1
 ```
 
-if you want running more then one instance of openerpon , please change ports
+if you want running more then one instance of openerp, or another user running same buildout,
+please change ports:
 ```Shell
 openerp_xmlrpc_port = 8069
 openerp_xmlrpcs_port = 8071
