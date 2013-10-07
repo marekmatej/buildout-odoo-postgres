@@ -13,4 +13,8 @@ cdvirtualenv
 mkdir eggs
 python bootstrap.py
 buildout
+supervisord
+supervisorctl status
+psql -d postgres -c 'CREATE DATABASE openerp_kybi'  # line copy from shell
+start_openerp
 ```
