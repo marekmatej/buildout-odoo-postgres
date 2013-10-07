@@ -38,7 +38,7 @@ supervisor_port = 9002
 supervisor_url = http://127.0.0.1
 ```
 ## Configure OpenERP
-config file: etc/openerp.cfg, if you want change more options in openerp.cfg, don't edit this file,
+config file: etc/openerp.cfg, if you want to change more options in openerp.cfg, don't edit this file,
 please add section [openerp] to buildout.cfg
 and set options.'add_option' = value, where 'add_option' is from openerp.cfg and run buildout again.
 
@@ -51,7 +51,7 @@ options.log_handler = [':ERROR']
 ...
 ```
 
-if you want running more then one instance of OpenERP, or another user running same buildout on same machine,
+if you want to run more then one instance of OpenERP, or another user running same buildout on same machine,
 please change ports:
 ```
 openerp_xmlrpc_port = 8069  (8069 default openerp)
