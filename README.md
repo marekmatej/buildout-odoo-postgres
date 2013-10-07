@@ -4,7 +4,8 @@ Buildout for OpenERP with PostgreSQL
 OpenERP 7.0, PostgreSQL 9.3 and Supervisord 3.0
 - Buildout create cron for starting Supervisord after reboot
 - Supervisor run PostgreSQL, more http://supervisord.org/
-- PostgreSQL run under user, and build enabled "trust" authentication for local connections more http://www.postgresql.org/docs/9.3/static/auth-methods.html
+- PostgreSQL run under user, and build enabled "trust" authentication for local connections,
+ more http://www.postgresql.org/docs/9.3/static/auth-methods.html
 
 Usage
 =====
