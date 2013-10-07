@@ -2,6 +2,7 @@ Buildout for OpenERP with PostgreSQL
 ====================================
 
 OpenERP 7.0, PostgreSQL 9.3 and Supervisord 3.0
+- PostgreSQL running under user, enabled "trust" authentication for local connections http://www.postgresql.org/docs/9.3/static/auth-methods.html
 
 Usage
 =====
