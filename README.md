@@ -38,7 +38,7 @@ postgres_maxconn = 100
 supervisor_port = 9002
 supervisor_url = http://127.0.0.1
 ```
-## OpenERP
+## Configure OpenERP
 config file: etc/openerp.cfg, if you want change more options in openerp.cfg, don't edit this file,
 please add section [openerp] to buildout.cfg
 and set options.'add_option' = value, where 'add_option' is from openerp.cfg and run buildout again.
