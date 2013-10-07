@@ -27,6 +27,8 @@ default in buildout.cfg, change values before run buildout
 
 ```Shell
 openerp_version = nightly 7.0 latest
+openerp_xmlrpc_port = 8069
+openerp_xmlrpcs_port = 8071
 
 postgres_version = 9.3.0
 postgres_host = 127.0.0.1
@@ -36,4 +38,12 @@ postgres_maxconn = 100
 
 supervisor_port = 9002
 supervisor_url = http://127.0.0.1
+```
+
+if you want running more then one instance of openerpon , please change ports
+```Shell
+openerp_xmlrpc_port = 8069
+openerp_xmlrpcs_port = 8071
+supervisor_port = 9002
+postgres_port = 5434
 ```
