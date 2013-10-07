@@ -30,8 +30,6 @@ openerp_version = nightly 7.0 latest
 postgres_version = 9.3.0
 postgres_host = 127.0.0.1
 postgres_db_name = openerp
-postgres_user = ${env:USER}
-postgres_password = false
 postgres_port = 5434
 postgres_maxconn = 100
 
