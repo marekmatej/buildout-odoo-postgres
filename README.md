@@ -43,10 +43,10 @@ supervisor_url = http://127.0.0.1
 if you want running more then one instance of openerp, or another user running same buildout,
 please change ports:
 ```Shell
-openerp_xmlrpc_port = 8069
-openerp_xmlrpcs_port = 8071
-supervisor_port = 9002
-postgres_port = 5434
+openerp_xmlrpc_port = 8069  (8069 default openerp)
+openerp_xmlrpcs_port = 8071 (8071 default openerp)
+supervisor_port = 9002      (9001 default supervisord)
+postgres_port = 5434        (5432 default postgres)
 ```
 
 TODO
