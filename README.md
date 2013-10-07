@@ -8,7 +8,7 @@ OpenERP 7.0, PostgreSQL 9.3 and Supervisord 3.0
 
 Usage
 =====
-```Shell
+```
 cd virtualenv projects dir
 git clone https://github.com/kybi/buildout-openerp-postgres openerp
 mkvirtualenv openerp
