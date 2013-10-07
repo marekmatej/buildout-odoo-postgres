@@ -5,7 +5,7 @@ Buildout for OpenERP 7.0 and PostgreSQL 9.3, Supervisord
 
 Usage
 =====
-
+'''Shell
  cd virtualenv projects dir
  git clone https://github.com/kybi/buildout-openerp-postgres openerp
  mkvirtualenv openerp
@@ -13,3 +13,4 @@ Usage
  mkdir eggs
  python bootstrap.py
  buildout
+'''
