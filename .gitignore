@@ -12,3 +12,4 @@ openerp/
 .installed.cfg
 .idea
 upgrade.py
+atlassian-ide-plugin.xml
