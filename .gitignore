@@ -10,4 +10,5 @@ etc/
 bin/
 openerp/
 .installed.cfg
+.idea
 upgrade.py

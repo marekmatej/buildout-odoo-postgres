@@ -1,5 +1,5 @@
 # Buildout for OpenERP with PostgreSQL
-OpenERP 7.0, PostgreSQL 9.3 and Supervisord 3.0
+OpenERP 7.0, PostgreSQL 9.3.4 and Supervisord 3.0
 - Buildout create cron for starting Supervisord after machine reboot
 - Supervisor run PostgreSQL, more http://supervisord.org/
 - PostgreSQL compile and run under user (not need root login), and build enabled "trust" authentication for local connections,
@@ -7,7 +7,7 @@ OpenERP 7.0, PostgreSQL 9.3 and Supervisord 3.0
 
 # Usage
 ```
-$ cd virtualenv projects dir
+$ cd virtualenv projects dir (cd $WORKON_HOME)
 $ git clone https://github.com/kybi/buildout-openerp-postgres openerp
 $ mkvirtualenv openerp
 $ cdvirtualenv
@@ -18,6 +18,9 @@ $ supervisord             # start supervisor deamon
 $ supervisorctl status    # check if running postgres
 $ psql -d postgres -c 'CREATE DATABASE ...'  # copy this line from shell after run buildout
 $ start_openerp
+$ http://localhost:8069
+  login: admin
+  pass:  admin
 ```
 
 # Settings
