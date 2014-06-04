@@ -13,3 +13,4 @@ openerp/
 .idea
 upgrade.py
 atlassian-ide-plugin.xml
+*~
