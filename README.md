@@ -15,7 +15,7 @@ En caso de no haberse hecho antes en la máquina en la que se vaya a realizar, i
 ```
 $ deb http://apt.anybox.fr/openerp common main
 ```
-- Si se quiere añadir la firma
+- Si se quiere añadir la firma. Esta a veces tarda mucho tiempo o incluso da time out. Es opcional meterlo
 ```
 $ sudo apt-key adv --keyserver hkp://subkeys.pgp.net --recv-keys 0xE38CEB07
 ```
@@ -36,8 +36,9 @@ $ git clone https://github.com/Pexego/Buildouts.git
 ```
 $ git checkout <rama>
 ```
-- Crear un virtualenv dentro de la carpeta del respositorio. Esto podría ser opcional, es caso obligatorio para desrrollo o servidor de pruebas, tal vez podríamos no hacerlo para un despliegue en producción
+- Crear un virtualenv dentro de la carpeta del respositorio. Esto podría ser opcional, obligatorio para desarrollo o servidor de pruebas, tal vez podríamos no hacerlo para un despliegue en producción. Si no está instalado, instalar el paquete de virtualenv
 ```
+$ sudo apt-get install python-virtualenv
 $ virtualenv sandbox --no-setuptools
 ```
 - Crear la carpeta eggs (no se crea al vuelo, ¿debería?
