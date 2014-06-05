@@ -1,15 +1,16 @@
 # Buildout base para proyectos con OpenERP y PostgreSQL
-OpenERP 7.0_ocb en el base, PostgreSQL 9.3.4 and Supervisord 3.0
+OpenERP master en el base, PostgreSQL 9.3.4 y Supervisord 3.0
 - Buildout crea cron para iniciar Supervisord después de reiniciar (esto no lo he probado)
-- Supervisor ejecuta PostgreSQL, más ifo http://supervisord.org/
+- Supervisor ejecuta PostgreSQL, más info http://supervisord.org/
 - También ejecuta la instancia de PostgreSQL
 - Si existe un archivo dump.sql, el sistema generará la base de datos con ese dump
+- Si existe  un archivo frozen.cfg es el que se debeía usar ya que contiene las revisiones aprobadas
 - PostgreSQL se compila y corre bajo el usuario user (no es necesario loguearse como root), se habilita al autentificación "trust" para conexiones locales. Más info en more http://www.postgresql.org/docs/9.3/static/auth-methods.html
 - Existen plantillas para los archivo de configuración de Postgres que se pueden modificar para cada proyecto.
  
 
 # Uso (adaptado)
-En caso de no haberse hecho antes en la máquuina en la qu ese vaya a realizar, instalar las dependencias que mar Anybox
+En caso de no haberse hecho antes en la máquina en la que se vaya a realizar, instalar las dependencias que mar Anybox
 - Añadir el repo a /etc/apt/sources.list:
 ```
 $ deb http://apt.anybox.fr/openerp common main
