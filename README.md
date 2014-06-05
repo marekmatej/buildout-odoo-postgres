@@ -15,7 +15,7 @@ En caso de no haberse hecho antes en la máquina en la que se vaya a realizar, i
 ```
 $ deb http://apt.anybox.fr/openerp common main
 ```
-- Si se quiere añadir la firma
+- Si se quiere añadir la firma. Esta a veces tarda mucho tiempo o incluso da time out. Es opcional meterlo
 ```
 $ sudo apt-key adv --keyserver hkp://subkeys.pgp.net --recv-keys 0xE38CEB07
 ```
