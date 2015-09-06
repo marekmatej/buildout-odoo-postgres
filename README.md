@@ -25,18 +25,23 @@ $ http://localhost:8069
 defaults in buildout.cfg
 
 ```
-odoo_version = nightly 8.0 latest
+folder = odoo
+odoo_version = git http://github.com/odoo/odoo.git odoo 8.0
+addons += local parts/odoo/addons
 odoo_xmlrpc_port = 8069
 odoo_xmlrpcs_port = 8071
 
 postgres_version = 9.4.4
 postgres_host = 127.0.0.1
 postgres_db_name = odoo
+postgres_user = ${env:USER}
+postgres_password = false
 postgres_port = 5434
 postgres_maxconn = 100
 
 supervisor_port = 9002
 supervisor_url = http://127.0.0.1
+
 ```
 ## Configure Odoo
 config file: etc/odoo.cfg, if you want to change more options in odoo.cfg, don't edit this file,
