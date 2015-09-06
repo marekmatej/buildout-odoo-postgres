@@ -1,23 +1,21 @@
-# Buildout for OpenERP with PostgreSQL
-OpenERP 7.0, PostgreSQL 9.3.4 and Supervisord 3.0
+# Buildout for Odoo with PostgreSQL
+Odoo 8.0, PostgreSQL 9.4.4 and Supervisord 3.1.3
 - Buildout create cron for starting Supervisord after machine reboot
 - Supervisor run PostgreSQL, more http://supervisord.org/
 - PostgreSQL compile and run under user (not need root login), and build enabled "trust" authentication for local connections,
- more http://www.postgresql.org/docs/9.3/static/auth-methods.html
+ more http://www.postgresql.org/docs/9.4/static/auth-methods.html
 
 # Usage
 ```
-$ cd virtualenv projects dir (cd $WORKON_HOME)
-$ git clone https://github.com/kybi/buildout-openerp-postgres openerp
-$ mkvirtualenv openerp
+$ cd $WORKON_HOME
+$ git clone https://github.com/kybi/buildout-odoo-postgres odoo
+$ mkvirtualenv odoo
 $ cdvirtualenv
 $ mkdir eggs
 $ python bootstrap.py
 $ buildout
 $ supervisord             # start supervisor deamon
 $ supervisorctl status    # check if running postgres
-$ psql -d postgres -c 'CREATE DATABASE ...'  # copy this line from shell after run buildout
-$ start_openerp
 $ http://localhost:8069
   login: admin
   pass:  admin
@@ -27,38 +25,38 @@ $ http://localhost:8069
 defaults in buildout.cfg
 
 ```
-openerp_version = nightly 7.0 latest
-openerp_xmlrpc_port = 8069
-openerp_xmlrpcs_port = 8071
+odoo_version = nightly 8.0 latest
+odoo_xmlrpc_port = 8069
+odoo_xmlrpcs_port = 8071
 
-postgres_version = 9.3.0
+postgres_version = 9.4.4
 postgres_host = 127.0.0.1
-postgres_db_name = openerp
+postgres_db_name = odoo
 postgres_port = 5434
 postgres_maxconn = 100
 
 supervisor_port = 9002
 supervisor_url = http://127.0.0.1
 ```
-## Configure OpenERP
-config file: etc/openerp.cfg, if you want to change more options in openerp.cfg, don't edit this file,
-please add section [openerp] to buildout.cfg
-and set options.'add_option' = value, where 'add_option' is from openerp.cfg and run buildout again.
+## Configure Odoo
+config file: etc/odoo.cfg, if you want to change more options in odoo.cfg, don't edit this file,
+please add section [odoo] to buildout.cfg
+and set options.'add_option' = value, where 'add_option' is from odoo.cfg and run buildout again.
 
 Example: change logging level for OpenERP
 ```
 'buildout.cfg'
 ...
-[openerp]
+[odoo]
 options.log_handler = [':ERROR']
 ...
 ```
 
-if you want to run more then one instance of OpenERP, or another user is running same buildout on the same machine,
+if you want to run more then one instance of Odoo, or another user is running same buildout on the same machine,
 please change ports:
 ```
-openerp_xmlrpc_port = 8069  (8069 default openerp)
-openerp_xmlrpcs_port = 8071 (8071 default openerp)
+odoo_xmlrpc_port = 8069  (8069 default odoo)
+odoo_xmlrpcs_port = 8071 (8071 default odoo)
 supervisor_port = 9002      (9001 default supervisord)
 postgres_port = 5434        (5432 default postgres)
 ```
@@ -85,7 +83,7 @@ OpenERP master en el base, PostgreSQL 9.3.4 y Supervisord 3.0
 - Si existe  un archivo frozen.cfg es el que se debeía usar ya que contiene las revisiones aprobadas
 - PostgreSQL se compila y corre bajo el usuario user (no es necesario loguearse como root), se habilita al autentificación "trust" para conexiones locales. Más info en more http://www.postgresql.org/docs/9.3/static/auth-methods.html
 - Existen plantillas para los archivo de configuración de Postgres que se pueden modificar para cada proyecto.
- 
+
 
 # Uso (adaptado)
 En caso de no haberse hecho antes en la máquina en la que se vaya a realizar, instalar las dependencias que mar Anybox
@@ -164,4 +162,4 @@ postgres_port = 5434        (5432 default postgres)
 
 Rastislav Kober, http://www.kybi.sk
 Santi Argüeso https://github.com/santiarg
-## 
+##
