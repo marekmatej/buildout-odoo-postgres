@@ -1,5 +1,5 @@
 # Buildout for Odoo with PostgreSQL
-Odoo 8.0, PostgreSQL 9.4.4 and Supervisord 3.1.3
+Odoo 9.0, PostgreSQL 9.4.4 and Supervisord 3.1.3
 - Buildout create cron for starting Supervisord after machine reboot
 - Supervisor run PostgreSQL, more http://supervisord.org/
 - PostgreSQL compile and run under user (not need root login), and build enabled "trust" authentication for local connections,
@@ -26,7 +26,7 @@ defaults in buildout.cfg
 
 ```
 folder = odoo
-odoo_version = git http://github.com/odoo/odoo.git odoo 8.0
+odoo_version = git http://github.com/odoo/odoo.git odoo 9.0
 addons += local parts/odoo/addons
 odoo_xmlrpc_port = 8069
 odoo_xmlrpcs_port = 8071
