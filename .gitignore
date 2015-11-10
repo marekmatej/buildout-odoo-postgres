@@ -1,6 +1,6 @@
 var/
-parts/
 lib/
+parts/
 include/
 eggs/
 develop-eggs/
@@ -14,3 +14,13 @@ openerp/
 upgrade.py
 atlassian-ide-plugin.xml
 *~
+*.ipynb
+*.pyc
+*.pyo
+*.swo
+*.swp
+.DS_Store
+.idea
+.installed.cfg
+.mr.developer.cfg
+upgrade.log
