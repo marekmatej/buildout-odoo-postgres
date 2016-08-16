@@ -14,3 +14,4 @@ openerp/
 upgrade.py
 atlassian-ide-plugin.xml
 *~
+pip-self-check.json
